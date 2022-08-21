@@ -42,7 +42,7 @@ nav ul li a::after{
     content: '';
     width: 0%;
     height: 3px;
-    background: #ff0000;
+    background: #a01a27;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -50,4 +50,30 @@ nav ul li a::after{
 }
 nav ul li a:hover::after{
     width: 100%;
-}   
+} 
+.header-text{
+    margin-top: 2px;
+    font-size: 20px;
+    padding-left: 39px;
+} 
+.header-text h1{
+    font-size: 50px;
+    margin-top: 300px;
+    text-align: center;
+}
+.header-text h2{
+    font-size: 40px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
