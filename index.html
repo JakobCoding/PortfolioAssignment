@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+    </style>
 </head>
 <body>
 <div id="header">
@@ -27,7 +30,9 @@
         </div>
     </div>
 </div>
+
 <!------------AboutMe-------------->
+
 <div id="about">
     <div class="container">
         <div class="row">
@@ -36,8 +41,56 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
+                <p>I Need to fill this in with a proper about me. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/app interfaces.</li>
+                        <li><span>Web Development</span><br>Web/app Development.</li>
+                        <li><span>Graphic Design</span><br>Logo & Typography, specialising in Vector graphics using Adobe Photoshop and Illustrator.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 - Current</span><br>Full Stack Web Development Accelerated Bootcamp at Coder Academy.</li>
+                        <li><span>2022 - Current</span><br>Tech lead at Mi-Startup LLC.</li>
+                        <li><span>2017 - 2019</span><br>Web Dev at POD eCommerce.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022 - Current</span><br>Diploma of Information Technology, Coder Academy Institute, Accelerated Web Dev Bootcamp.</li>
+                        <li><span>2014 - 2018</span><br>BA of Commerce from ECU Western Australia.</li>
+                        <li><span>2003 - 2007</span><br>Cert IV Carpentry from Swan Tafe Western Australia.<br></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-</div>    
+</div>  
+
+<!------------JavaScript--------------->
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
 </body>
 </html>
