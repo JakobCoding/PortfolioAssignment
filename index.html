@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacobs Portfolio Website</title>
+       <title>Jacobs Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
@@ -16,16 +16,19 @@
     <div class="container">
         <nav>
             <img src="images/jdlogo.svg" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li> 
-                <li><a href="#">About</a></li> 
-                <li><a href="#">Services</a></li> 
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li> 
+                <li><a href="#about">About</a></li> 
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li> 
                 <li><a href="#">Blog</a></li> 
-                <li><a href="#">Contact</a></li>     
-            </ul>    
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i> 
+            </ul>   
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i> 
         </nav>
         <div class="header-text">
-            <p>Web Developer</p>  
+            <!-- <p>Web Developer</p>   -->
             <h1>Welcome to My HTML, CSS & JS</h1>
             <h2>PORTFOLIO WEBSITE</h2>
         </div>
@@ -41,22 +44,22 @@
                 <img src="images/me.jpg">
             </div>
             <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
+                <h1 class="sub-title">About Me</h1><br>
                 <p>My name is Jake Chalmers and I have recently made the decision to fast track my learning by deffering
-                    from my university degree in psychology & computer science to take on a fun and exciting accelerated
+                    from my university degree in psychology & computer science & take on a fun and exciting accelerated
                     Web development bootcamp delivered online by Coder Acedemy. It was a big decision and commitment to make but
-                    I'm really glad I did. I am loving the fast-paced practicle hands on learning methods that university can't provide and each day 
-                    I get a little bit better. The Sky's the Limit!</p>
+                    I'm really glad I did. I am loving the fast-paced practicle hands on learning methods that university can't provide. Each day 
+                    I get a little bit better which is very satisfying. The Sky's the Limit!</p><br>
 
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
-                    <p class="tab-links" onclick="opentab('recreation')">Recreation</p>
+                    <!-- <p class="tab-links" onclick="opentab('recreation')">Recreation</p> -->
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
-                        <li><span>UI/UX</span><br>Designing user friendly Web/app interfaces.</li>
+                        <li><span>UI/UX Design</span><br>Designing user friendly Web/app interfaces.</li>
                         <li><span>Web Development</span><br>Web/app Development.</li>
                         <li><span>Graphic Design</span><br>Logo & Typography, specialising in Vector graphics using Adobe Photoshop and Illustrator.</li>
                     </ul>
@@ -75,12 +78,12 @@
                         <li><span>2003 - 2007</span><br>Cert IV Carpentry from Swan Tafe Western Australia.<br></li>
                     </ul>
                 </div>
-                <div class="tab-contents" id="recreation">
+                <!-- <div class="tab-contents" id="recreation">
                     <ul>
-                        <li><span>Health & Wellbeing</span><br>Health is the most important part of my life, I enjoy staying physically active, eating well and practicing mindfullness meditation. I do my best to combine all these things into my daily routine for optimum productivity.</li>
-                        <li><span>Personal values</span><br>Integrity, Accountability, Diligence, Perseverance, and Self Discipline.</li>
-                        <li><span>Fabourite Things</span><br>Dogs, tasty food, building quality relationships with others and being 1% better than i was yesterday.<br></li>
-                    </ul>
+                        <li><span>Health & Wellbeing</span><br>I enjoy staying physically active, eating well and practicing mindfullness meditation. I do my best to combine these things into my daily routine for optimum productivity.</li>
+                        <li><span>Personal Values</span><br>Integrity, Accountability, Diligence, Perseverance and Self Discipline.</li>
+                        <li><span>Favourite Things</span><br>Dogs, tasty food, building quality relationships with others and getting 1% better everyday.<br></li>
+                    </ul> -->
                 </div>
             </div>
         </div>
@@ -200,6 +203,21 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
+</script>
+
+<!----------Side bar menu javascript--------------->
+
+<script>
+
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemenu.style.right = "0";
+}
+function closemenu(){
+    sidemenu.style.right = "-200px";
+}
+
 </script>
 
 </body>
