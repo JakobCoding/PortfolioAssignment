@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>Jakes Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
     </style>
@@ -215,26 +215,7 @@ function openmenu(){
 function closemenu(){
     sidemenu.style.right = "-200px";
 }
-
 </script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwa0oZMqSUhEaLrwShFeWrhuOg8A4vQvBNs7rWlJZFZKb2Dk1hqpdmsTnCfeeUPJCOhWg/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = "" 
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
 
 </body>
 </html> 
