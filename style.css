@@ -148,12 +148,18 @@ nav ul li a:hover::after{
     padding: 30px 0;
 
 }
+/* The css below enables my servies compenents to be styled in a a grid style flex box layout, it also contains a border radius of 10px so the corners of my boxes are rounded 
+for asethetic reasons this styling is used widley thoughout the website */
+
 .services-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
+
+/* Transitions are a great css effect and I have used 0.5 seconds  on all my hover and tranform transitions throughout the site */
+
 .services-list div{
     background: #262626;
     padding: 40px;
@@ -178,6 +184,9 @@ nav ul li a:hover::after{
     margin-top: 20px;
     display: inline-block;
 }
+/* Hover effect is a great way to snaz up your web site and make it look cool and also professional with a block of css it used widely throughout the website. 
+I have made sure to colour match my hover effects and transistions throughout the website to keep the website on theme and aesthetic pleasing */
+
 .services-list div:hover{
     background: #ff004f;
     transform: translateY(-10px);
