@@ -14,3 +14,7 @@ This website is accessible and fully responsive to all modern media screens incl
 - Portfolio Page: Contains my work, current and past projects displayed with external links and styled with the common theme of the website in mind.
 - Blog Page: Includes 5 blog posts that are important to me and displayed in the common them of the website.
 - Contact Page: Last but not least the contact page contains all my social media links, a downloadable CV link and a contact me flex box form that allows the user to contact with a message of their choice while also collecting their contact information which could be utilized to create an email list. For the purpose of this website I have included this feature to allow easy and efficient initial contact between myself and a potential employer who might not have the time to send me an email on the spot phone call.
+---
+## Sitemap 
+Created using WireframeCC
+![Site map](
